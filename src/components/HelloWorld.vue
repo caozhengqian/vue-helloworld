@@ -10,12 +10,14 @@
       @click-left="clickLeft"
       @click-right="clickRight"
     />
-    <One />
+    <One  />
+    <TodoList/>
   </div>
 </template>
 
 <script>
 import One from "./One";
+import TodoList from './todoList/TodoList'
 
 export default {
   name: "HelloWorld",
@@ -27,7 +29,8 @@ export default {
     toMsg: "toMsg"
   }),
   components: {
-    One
+    One,
+      TodoList
   },
   methods: {
     clickLeft: function() {
@@ -46,10 +49,10 @@ export default {
     // this.toMsg = "test";
     console.info("test==>", this._props.msg);
     // let _this = this;
-    setTimeout(function() {
-      alert("Hello");
-      // _this.toMsg = "test2";
-    }, 3000);
+    // setTimeout(function() {
+    //   alert("Hello");
+    //   // _this.toMsg = "test2";
+    // }, 3000);
   },
   beforeMount() {
     console.info("HelloWorld--- beforeMount()");
